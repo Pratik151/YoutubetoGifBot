@@ -6,16 +6,19 @@ import time
 
 user_agent = ("Reddit Youtube to gif v0.1 by /u/Austinto")
 r = praw.Reddit(user_agent=user_agent)
+
+#Replace with your reddit username and password of bot.
 r.login("REDDIT_USERNAME","REDDIT_PASSWORD")
 wordsToMatch = ['!gfycatbot']
 cache = []
 
-
+#used to find the length of the video.
 def get_length(url):
     video = pafy.new(url)
     length=video.length
     return length
-
+    
+#used to convert video to gif.
 def convert_to_gif(url):
     response = urllib2.urlopen(url)
     data = json.load(response)
