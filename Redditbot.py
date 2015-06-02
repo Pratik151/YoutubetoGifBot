@@ -4,9 +4,9 @@ import json
 import pafy
 import time
 
-user_agent = ("Reddit Youtube to gig v0.1 by /u/Austinto")
+user_agent = ("Reddit Youtube to gif v0.1 by /u/Austinto")
 r = praw.Reddit(user_agent=user_agent)
-r.login("RedditAutoCommentBot","pratik123")
+r.login("REDDIT_USERNAME","REDDIT_PASSWORD")
 wordsToMatch = ['!gfycatbot']
 cache = []
 
@@ -22,7 +22,7 @@ def convert_to_gif(url):
     return data['gifUrl']
 
 def run_bot():
-    subreddit = r.get_subreddit("YoutubetoGif")
+    subreddit = r.get_subreddit("SUBREDDITNAME")
     for submission in subreddit.get_hot(limit=1):
         comments = submission.comments
         for comment in comments:
