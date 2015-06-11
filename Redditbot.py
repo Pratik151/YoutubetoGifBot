@@ -4,9 +4,9 @@ import json
 import pafy
 import time
 
-user_agent = ("Reddit Youtube to gif v0.1 by /u/Austinto")
+user_agent = ("Reddit Youtube to Gif by /u/Austinto")
 r = praw.Reddit(user_agent=user_agent)
-r.login("YoutubeToGifBot","pratik151")
+r.login("REDDIT_USERNAME","PASSWORD")
 
 
 
@@ -30,7 +30,7 @@ def convert_to_gif(url):
 
 
 def run_bot():
-    subreddit = r.get_subreddit("leagueoflegends")
+    subreddit = r.get_subreddit("SUBREDDIT_NAME")
     for submission in subreddit.get_rising(limit=30):
         url = submission.url
         if "youtu" in url:
