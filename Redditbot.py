@@ -11,7 +11,7 @@ subreddit = r.get_subreddit("SUBREDDIT_NAME")
 
 """
 urlError Exception is raised when there is error in getting video length.
-Like Error in getting video data(Video blocked) or video not allowed.
+Like Error in getting video data(Video blocked) or invalid url.
 """
 class urlError(Exception):
     def __init__(self):
