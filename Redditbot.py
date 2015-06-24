@@ -15,7 +15,7 @@ Like Error in getting video data(Video blocked) or invalid url.
 """
 class urlError(Exception):
     def __init__(self):
-        self.value=value
+        pass
     def __str__(self):
         return "Error in Getting length of Video"
     
